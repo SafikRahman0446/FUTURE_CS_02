@@ -1,52 +1,79 @@
 # FUTURE_CS_02
-# FUTURE_CS_02
-🎯 Phishing Attack Simulation – Credential Harvester
-📌 Overview
-This project demonstrates a phishing attack simulation using the Social Engineering Toolkit (SET) on Kali Linux. The objective was to assess employee awareness of phishing threats by deploying cloned login pages to capture credential inputs in a controlled environment.
+TASK 2 - SECURITY ALERT MONITORING & INCIDENT  RESPONSE
 
-🛠️ Tools & Environment
-OS: Kali Linux
+# 🔍 Security Alert Monitoring & Incident Response  
+**SOC Cybersecurity Internship Project**
 
-Toolkit: Social Engineering Toolkit (SET)
+## 📌 Overview  
+This project simulates real-world SOC operations using **Splunk** to monitor security alerts and perform incident response. It involves analyzing Windows event logs, detecting suspicious activities, classifying incidents, and documenting remediation steps.
 
-Attack Vector: Credential Harvester (Web Attack Method)
+---
 
-Server: Local Apache server (hosted phishing pages)
+## 🧰 Tools & Technologies  
+- Splunk Enterprise (SIEM tool)  
+- Windows 10 (for generating and analyzing event logs)  
+- Simulated log files (Security, Sysmon, etc.)  
+- Notepad++ or VS Code (for documentation)
 
-IP: Localhost (customized for simulation)
+---
 
-🚀 Methodology
-Cloned target login pages using SET.
+## 🛠️ Project Workflow  
 
-Hosted pages on a local Apache server.
+### 1. Log Ingestion  
+- Uploaded simulated Windows logs into Splunk  
+- Indexed sources like:
+  - `WinEventLog:Security`  
+  - `WinEventLog:System`  
+  - `Sysmon`
 
-Captured POST data (usernames & passwords) submitted via phishing forms.
+### 2. Security Monitoring  
+- Used SPL (Search Processing Language) to explore logs  
+- Visualized activities via dashboards  
+- Monitored for patterns like:
+  - Multiple failed login attempts  
+  - PowerShell execution  
+  - Registry or file changes  
+  - New user creation or group changes
 
-Analyzed user interaction and response behavior.
+### 3. Alert Detection  
+- Detected potential threats such as:
+  - Brute-force attacks  
+  - Privilege escalation  
+  - Lateral movement  
+  - Suspicious command execution  
 
-📊 Results
-Credentials were successfully harvested from test users.
+### 4. Incident Classification  
+- Categorized incidents by severity:
+  - 🟢 Low: Normal failed logins  
+  - 🟠 Medium: Suspicious PowerShell activity  
+  - 🔴 High: Unauthorized admin access
 
-Sample:
-Username: joe
-Password: password123
+### 5. Response & Remediation  
+- Identified and documented:
+  - Affected systems  
+  - Source IPs  
+  - Compromised user accounts  
+- Suggested actions:
+  - Password reset  
+  - Account disablement  
+  - Patch application  
+  - Blocking malicious IPs
 
-⚠️ Challenges
-Difficulties cloning dynamic sites (e.g., Instagram, Microsoft).
-Apache port conflicts.
-Mixed levels of user awareness.
+---
 
-✅ Recommendations
-Implement regular phishing awareness training.
 
-Enforce Multi-Factor Authentication (MFA).
+## 🧠 Learning Outcomes  
+- Developed skills in real-time log monitoring  
+- Understood SIEM fundamentals and SOC workflows  
+- Learned SPL for custom searches  
+- Practiced classifying and responding to incidents
 
-Conduct periodic phishing simulations.
+---
 
-Enhance email filtering and endpoint protection.
+## ⚠️ Disclaimer  
+This project uses **simulated logs** and is meant for **educational purposes only**. No real systems or data were involved.
 
-🧠 Conclusion
-The simulation highlighted security awareness gaps and reinforced the need for continuous training and layered security protocols to combat phishing threats.
+---
 
-Author: Safik Rahman 
-Date: July 7, 2025
+
+
